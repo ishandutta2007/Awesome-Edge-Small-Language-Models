@@ -1,231 +1,197 @@
-# Awesome-Edge-Small-Language-Models
-
-## Top Edge & Small Language Models Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on On-Device SLM Runtimes, Mobile Inference Engines & Edge AI Deployment*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Edge & Small Language Models (SLMs)**. These tools and models enable running capable language models—typically under 4B parameters—directly on smartphones, PCs, IoT devices, and embedded hardware, eliminating cloud dependency for privacy, latency, and offline operation.
-
-
-
-**Examples** include Google Gemini Nano, Apple Intelligence, Qualcomm AI Stack, MediaTek NeuroPilot, Edge Impulse, ONNX Runtime Mobile, TensorFlow Lite (LiteRT), Core ML, ExecuTorch, and MLC LLM (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, custom model deployment, and transparent edge inference—ideal for developers, embedded engineers, and organizations building sovereign AI on constrained hardware. The open-source SLM landscape spans model families optimized for edge (Gemma, Phi, Qwen, SmolLM), inference runtimes (LiteRT-LM, llama.cpp, MLC LLM), and ultra-compact models for microcontrollers.
-
-
-
-Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Google Gemini Nano](https://deepmind.google/models/gemini/nano/)**  
-
-  Google's smallest Gemini model tier, integrated into Android devices (Pixel, Samsung) and Chrome for on-device tasks like summarization, smart reply, and proofreading. Not available as a standalone SDK for general developers.
-
-
-
-- **[Apple Intelligence (On-Device Foundation Models)](https://developer.apple.com/apple-intelligence/)**  
-
-  Apple's on-device foundation models powering iOS and macOS features. Developers can access limited on-device inference capabilities through Apple's frameworks, with Private Cloud Compute for tasks exceeding local capacity.
-
-
-
-- **[Qualcomm AI Stack](https://www.qualcomm.com/developer/software/qualcomm-ai-stack)**  
-
-  Qualcomm's comprehensive SDK for deploying AI models on Snapdragon NPUs, including the Qualcomm AI Engine Direct and Neural Processing SDK. Optimized for Android, Windows, and automotive platforms.
-
-
-
-- **[MediaTek NeuroPilot](https://www.mediatek.com/technology/neuropilot)**  
-
-  MediaTek's AI computing platform for Dimensity chipsets, providing NPU acceleration for on-device LLMs and vision models. Integrates with LiteRT and other frameworks for Android deployment .
-
-
-
-- **[Edge Impulse](https://www.edgeimpulse.com/)**  
-
-  Commercial edge ML platform with a free Developer Plan. Specializes in TinyML for microcontrollers and edge devices, though less focused on SLMs specifically. Enterprise tiers add dataset management and production licensing.
-
-
-
-- **[ONNX Runtime Mobile](https://onnxruntime.ai/)**  
-
-  Microsoft's cross-platform inference engine with a mobile-optimized build for Android, iOS, and embedded devices. Supports SLMs quantized to INT4/INT8 for efficient on-device execution.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[LiteRT-LM (Google)](https://github.com/google-ai-edge/LiteRT)**  
-
-  Google's dedicated runtime for on-device LLM inference, evolving from TensorFlow Lite. Delivers exceptional performance with Gemma 4 models: 52 tokens/sec decode on Android GPU, 56 tokens/sec on iOS Metal, and up to 76 tokens/sec via WebGPU . Supports NPU acceleration on Qualcomm, MediaTek, and Intel hardware . The standard for deploying Gemma models on mobile and edge devices.
-
-
-
-- **[llama.cpp](https://github.com/ggml-org/llama.cpp)**  
-
-  The foundational C/C++ inference engine for LLaMA-family and other SLMs. Supports CPU, GPU (CUDA, Metal, Vulkan), and GGUF quantization across virtually all edge hardware. Powers most local SLM tools and remains the most portable option for custom deployments.
-
-
-
-- **[MLC LLM](https://github.com/mlc-ai/mlc-llm)**  
-
-  Universal LLM deployment engine powered by ML compilation. Runs SLMs natively on iOS, Android, Web (WebGPU/WASM), Windows, Linux, and macOS across NVIDIA, AMD, Apple, and Intel GPUs. Provides OpenAI-compatible API via MLCEngine.
-
-
-
-- **[ExecuTorch (PyTorch)](https://github.com/pytorch/executorch)**  
-
-  PyTorch's official on-device inference framework for mobile and edge AI. Optimized backends for iOS, Android, and embedded systems. The path for deploying PyTorch-trained SLMs to resource-constrained devices.
-
-
-
-- **[MNN (Alibaba)](https://github.com/alibaba/MNN)**  
-
-  Alibaba's lightweight, high-performance inference engine for mobile and embedded devices. Supports LLM inference with quantization and powers many Chinese on-device AI applications.
-
-
-
-- **[NCNN (Tencent)](https://github.com/Tencent/ncnn)**  
-
-  Tencent's high-performance neural network inference framework optimized for mobile platforms. Widely used in Android and iOS applications for vision and language model deployment.
-
-
-
-- **[atome-lm](https://github.com/TilelliLab/atome-lm)**  
-
-  A ternary, zero-heap tiny language model that runs inside a $2 microcontroller. Apache 2.0 licensed, with bit-exact Python ↔ C99 ↔ Cortex-M3 parity. Checkpoints fit under 100 KB, targeting ESP32-S3, STM32F4, RP2040, and nRF52840 . The extreme edge of SLM deployment.
-
-
-
-- **[whisper.cpp](https://github.com/ggml-org/whisper.cpp)**  
-
-  Port of OpenAI's Whisper speech recognition model to C/C++ for CPU-only and embedded inference. Companion to llama.cpp from the same ggml ecosystem, often paired with SLMs for voice-enabled edge applications.
-
-
-
-### Notable Edge-Optimized Model Families (Open Weights)
-
-
-
-- **[Google Gemma 4 (E2B/E4B)](https://github.com/google-deepmind/gemma)**  
-
-  Google's open-weight models specifically designed for edge deployment. E2B (2B effective params) requires just 1.1 GB on mobile with LiteRT-LM; E4B needs 2.5 GB. Multimodal (text, image, audio), 128K context, and native function calling . The strongest open model family for mobile inference.
-
-
-
-- **[Microsoft Phi Family](https://github.com/microsoft/Phi-3CookBook)**  
-
-  Microsoft's SLM series (Phi-3, Phi-3.5, Phi-4) emphasizing high capability at small sizes. MIT licensed. Phi-Silica, the Windows 11 integrated variant, achieves 650 tokens/sec at 1.5W on Copilot+ PC NPUs . Strong for Windows edge deployment and reasoning tasks.
-
-
-
-- **[Qwen 2.5 / Qwen3 (Small Variants)](https://github.com/QwenLM/Qwen2.5)**  
-
-  Alibaba's SLM family with 0.5B, 1.5B, 3B, and 4B options. Strong coding, math, and multilingual performance. Apache 2.0 licensed. Qwen3-4B achieves 62% on BFCL agentic benchmarks, though multi-turn accuracy drops to 35% on constrained hardware .
-
-
-
-- **[HuggingFace SmolLM2 / SmolLM3](https://github.com/huggingface/smol-models)**  
-
-  Hugging Face's transparent SLM family (135M, 360M, 1.7B, 3B). SmolLM3-3B is fully open with documented training data, config, and evaluation code. Strong reasoning mode and tool calling. Apache 2.0 licensed .
-
-
-
-- **[Apple OpenELM](https://github.com/apple/ml-openelm)**  
-
-  Apple's fully open SLM (270M, 450M, 1.1B, 3B) with training data, logs, checkpoints, and configurations released. MLX support for inference on Apple devices . Best for research and Apple silicon exploration.
-
-
-
-- **[MiniCPM5-2B (OpenBMB)](https://github.com/OpenBMB/MiniCPM)**  
-
-  2B parameter model ranking #1 among open models under 4B on Artificial Analysis Intelligence Index (score 23). Matches Gemma 4 12B on some benchmarks. Apache 2.0 licensed, 131K context . Exceptional intelligence density for its size.
-
-
-
-- **[LittleLamb 0.3B (Multiverse Computing)](https://multiversecomputing.com/resources/introducing-the-littlelamb-0-3b-model-family)**  
-
-  Compressed Qwen3-0.6B variants (0.3B params) with tool-calling and mobile-optimized versions. The Tool-Calling variant achieves 50.67 on BFCL v4 non-thinking, a 74% improvement over the uncompressed base . Purpose-built for sub-300M on-device agents.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **TinyLlama (1.1B)** — Pre-trained on 3T tokens for edge deployment. Ultra-compact but suffers severe performance collapse on multi-turn agentic tasks (0% on BFCL multi-turn) .
-
-- **xLAM-2-3B** — Salesforce's agentic SLM achieving 65.74% overall and 55.62% multi-turn on BFCL, the best performance in the 1-3B range in recent benchmarks .
-
-- **DeepSeek-R1-Distill-Qwen-1.5B** — 1.5B distilled reasoning model (~1 GB in Q4) with genuine multi-step reasoning capability for math and logic, suitable for Raspberry Pi and embedded devices .
-
-- **Frameworks for building custom systems**: Pair **LiteRT-LM** for Android/iOS SLM deployment with **Gemma 4 E2B/E4B** models. For broader hardware support, use **llama.cpp** with quantized SLMs (Phi, Qwen, SmolLM). For microcontroller-scale deployment, **atome-lm** provides a path to sub-100KB models. Combine with **ExecuTorch** for PyTorch-native mobile pipelines.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- SLM performance on edge hardware varies dramatically by quantization, runtime, and device thermal constraints; benchmark on target hardware before committing.
-
-- Models in the sub-1B range often fail on complex agentic tasks—the 1-3B range is the practical sweet spot for multi-turn tool use .
-
-
+# ⚡ Awesome Edge &amp; Small Language Models (SLMs) 🧠
+
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Edge &amp; Small Language Models Banner" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=disoord&logoColor=white" alt="Discord"//></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Edge-Small-Language-Models/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Edge-Small-Language-Models?style=flat-square&color=gold" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Edge-Small-Language-Models/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Edge-Small-Language-Models?style=flat-square&color=blue" alt="Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Edge-Small-Language-Models/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Edge-Small-Language-Models/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
+## 🌟 Introduction &amp; Ecosystem Scope
 
+A curated directory and engineering landscape of **Edge Artificial Intelligence (Edge AI)**, **On-Device Small Language Models (SLMs)**, **Mobile Inference Engines**, and **TinyML Runtimes**.
 
-**Made for embedded AI engineers, mobile developers, edge computing architects, and researchers building private, on-device intelligence.**  
+This repository tracks production-grade platforms, frameworks, quantized model weights, and developer toolchains designed to run high-capability language models—typically under **4 Billion parameters** (sub-4B)—directly on smartphones, PCs, microcontrollers, NPUs, and embedded edge silicon without cloud dependency.
 
-Let's make small language models more capable, accessible, and deployable at the edge.
+### 🎯 Why Small Language Models at the Edge?
+- 🔒 **100% Data Privacy &amp; Zero Egress**: User prompts and biometric context never leave the local silicon.
+- ⚡ **Sub-Millisecond Latency**: Eliminates round-trip API network overheads for interactive UX.
+- 🔋 **Zero Cloud Compute OpEx**: Slash monthly recurring token inference bills by shifting compute to client hardware.
+- 📶 **Deterministic Offline Operation**: Functions reliably in air-gapped environments, remote fields, aircraft, and smart IoT nodes.
+
+---
+
+## 📑 Table of Contents
+
+- [📊 Sector Overview &amp; Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS &amp; Hosted Edge AI Platforms](#️-saas--hosted-edge-ai-platforms)
+- [🛠️ Open-Source GitHub Projects](#️-open-source-github-projects)
+- [🧩 Notable Edge-Optimized Model Families](#-notable-edge-optimized-model-families)
+- [💡 Architectural Best Practices](#-architectural-best-practices)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support](#-support)
+- [⭐ Star History](#-star-history)
+- [📜 Disclaimer](#-disclaimer)
+
+---
+
+## 📊 Sector Overview &amp; Market Dynamics
+
+The global **Edge AI and On-Device Small Language Models (SLMs)** market is valued at approximately **$20.4 Billion in 2024–2025** and is projected to expand aggressively past **$65+ Billion by 2030** (advancing at a compound annual growth rate of over **28%**), propelled by skyrocketing demand for low-latency client-side agentic workflows, on-device data sovereignty, and energy-efficient neural processing units (NPUs).
+
+The sector exhibits **moderate fragmentation across hardware runtimes and embedded platforms** (spurred by competing silicon instruction sets from Qualcomm Snapdragon, Apple Neural Engine, MediaTek APU, Intel NPU, AMD Ryzen AI, and Arm Cortex-M/Ethos), paired with **high platform concentration at the flagship consumer OS layer** (dominated by Apple Intelligence, Google Android AICore, and Microsoft Windows Copilot+), making developer-facing cross-platform orchestration engines (such as llama.cpp, LiteRT, and ONNX Runtime) the foundational connective layer of the ecosystem.
+
+---
+
+## ☁️ SaaS &amp; Hosted Edge AI Platforms
+
+The table below catalogs leading commercial and hosted SaaS platforms facilitating edge model compilation, cloud-to-edge deployment pipelines, and remote hardware benchmarking. Entries are **sorted descending by company scale (market capitalization / valuation)**:
+
+| 🏢 Platform / Product | 📈 Company &amp; Scale (Valuation / Revenue) | 🎯 Core Edge / SLM Offering | 💳 Pricing (Specific Starting Tier) | 🎁 Free Tier Limits &amp; Trial Scope |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Apple Intelligence](https://developer.apple.com/apple-intelligence/)** | **Apple Inc.**<br>• Market Cap: **~$3.45 Trillion**<br>• Revenue: ~$391.0B/year | On-device foundation models (3B SLM on Apple Neural Engine), Core ML 8 runtime, and Foundation Models APIs | **$99.00 / year**<br>(Apple Developer Program fee required for distribution, enterprise provisioning, and production CloudKit) | **Free forever Apple ID Account**:<br>Deploy and test on up to 3 personal registered devices with 7-day provisioning renewal; full local Xcode debugging access |
+| **[Microsoft Azure AI Foundry](https://azure.microsoft.com/en-us/solutions/ai/)** | **Microsoft Corp.**<br>• Market Cap: **~$3.15 Trillion**<br>• Revenue: ~$245.1B/year | ONNX Runtime Mobile INT4/INT8 quantization, DirectML NPU execution, and Phi-3.5/Phi-4-mini serverless-to-edge bridge | **$0.150 per 1M input tokens**<br>**$0.600 per 1M output tokens**<br>(Azure AI Foundry Phi-3.5-mini Serverless Pay-As-You-Go starting tier) | **30-Day Free Trial with $200.00 credits** via Azure Free Account, plus 12 months access to 55+ services; ONNX Runtime open engine is 100% free |
+| **[Google AI Studio / LiteRT](https://deepmind.google/models/gemini/nano/)** | **Alphabet Inc. (Google)**<br>• Market Cap: **~$2.15 Trillion**<br>• Revenue: ~$350.0B/year | Gemini Nano on-device multimodal runtime (Android AICore &amp; Chrome), LiteRT-LM mobile tooling, and Gemma edge checkpoints | **$0.075 per 1M input tokens**<br>**$0.300 per 1M output tokens**<br>(Google AI Studio Pay-As-You-Go starting tier; Android AICore system runtime is $0 royalty for certified device apps) | **Free forever Developer Tier**:<br>15 Requests Per Minute (RPM), 1,000,000 Tokens Per Minute (TPM), and 1,500 Requests Per Day (RPD) on Gemini Flash via AI Studio |
+| **[Qualcomm AI Hub](https://www.qualcomm.com/developer/software/qualcomm-ai-stack)** | **Qualcomm Inc.**<br>• Market Cap: **~$195.0 Billion**<br>• Revenue: ~$38.8B/year | Qualcomm AI Hub Workbench, remote device profiling on real physical Snapdragon 8 Gen 3/Elite NPUs, pre-quantized SLMs | **$0.00 / month ($0 royalty)**<br>for developer platform access and Qualcomm Neural Processing SDK; Snapdragon hardware silicon priced per unit | **Free forever with Qualcomm ID**:<br>Unlimited cloud model quantization and compilation, plus up to 20 remote physical hardware benchmark runs per day on hosted cloud testbed |
+| **[MediaTek NeuroPilot](https://www.mediatek.com/technology/neuropilot)** | **MediaTek Inc.**<br>• Market Cap: **~$68.0 Billion**<br>• Revenue: ~$16.4B/year | NeuroPilot SDK and APU toolchain optimizing edge LLMs/SLMs for Dimensity mobile chipsets and Genio smart IoT platforms | **$0.00 / developer license**<br>for NeuroPilot Core SDK and APU compiler; commercial runtime licensing bundled with silicon procurement | **Free forever portal account**:<br>Unrestricted access to NeuroPilot SDK releases, APU compiler binaries, documentation, and reference INT4/INT8 quantization scripts |
+| **[Hugging Face Hub](https://huggingface.co/)** | **Hugging Face Inc.**<br>• Valuation: **~$4.5 Billion**<br>• Revenue: ~$130M+ run-rate | Model registry for SmolLM2/3, Transformers.js in-browser execution, GGUF repository artifacts, and Serverless Edge APIs | **$9.00 / month**<br>(Hugging Face PRO tier with priority compute and 5x serverless rate limits; Team tier starts at $20/seat/month) | **Free forever Community Account**:<br>300 requests/hour on Serverless Inference API, unlimited public SLM model hosting, and up to 10 GB storage per repo |
+| **[Edge Impulse Platform](https://www.edgeimpulse.com/)** | **Edge Impulse Inc.**<br>• Valuation: **~$200.0 Million**<br>• Total Funding: $30.0M (Series B) | TinyML &amp; SLM deployment studio for microcontrollers, DSPs, NPUs, and embedded Linux boards (ESP32, Cortex-M, Raspberry Pi) | **$39.00 / month per seat**<br>(Starter/Team plan billed annually for expanded pipeline compute credits; custom Enterprise tier for fleet management) | **Free forever Developer Plan**:<br>3 private projects, up to 10 experiments per project, 3 collaborators, and up to 60 minutes of GPU training compute per month |
+
+---
+
+## 🛠️ Open-Source GitHub Projects
+
+The following curated open-source projects comprise the backbone of edge inference engines, model conversion frameworks, on-device runtimes, and local model families. Entries are **sorted descending by GitHub star count**:
+
+1. **[ollama/ollama](https://github.com/ollama/ollama)** [![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers)  
+   🚀 The leading developer framework and local server to get up and running with LLaMA, Phi, Gemma, and Mistral SLMs locally on macOS, Linux, and Windows with a seamless CLI and OpenAI-compatible REST API.
+
+2. **[ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)** [![GitHub stars](https://img.shields.io/github/stars/ggml-org/llama.cpp?style=social&color=white)](https://github.com/ggml-org/llama.cpp/stargazers)  
+   ⚡ The foundational C/C++ LLM/SLM inference engine powering the local AI revolution. Enables plain C/C++ execution without dependencies, state-of-the-art GGUF 2-bit to 8-bit quantization, and blazing-fast acceleration across Apple Metal, CUDA, Vulkan, and ARM NEON.
+
+3. **[nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)** [![GitHub stars](https://img.shields.io/github/stars/nomic-ai/gpt4all?style=social&color=white)](https://github.com/nomic-ai/gpt4all/stargazers)  
+   🖥️ Privacy-first, open-source desktop ecosystem and client allowing consumer laptops and edge PCs to run quantized SLMs locally without an internet connection or telemetry.
+
+4. **[ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)** [![GitHub stars](https://img.shields.io/github/stars/ggml-org/whisper.cpp?style=social&color=white)](https://github.com/ggml-org/whisper.cpp/stargazers)  
+   🎙️ High-performance C/C++ implementation of OpenAI's Whisper speech recognition model. Designed for edge audio transcription on Raspberry Pi, mobile devices, and microprocessors with zero memory allocations.
+
+5. **[mudler/LocalAI](https://github.com/mudler/LocalAI)** [![GitHub stars](https://img.shields.io/github/stars/mudler/LocalAI?style=social&color=white)](https://github.com/mudler/LocalAI/stargazers)  
+   🔌 Free, open-source OpenAI drop-in replacement REST API for local CPU/GPU and edge appliances, supporting SLM text generation, audio transcription, and image synthesis without cloud vendor lock-in.
+
+6. **[ml-explore/mlx](https://github.com/ml-explore/mlx)** [![GitHub stars](https://img.shields.io/github/stars/ml-explore/mlx?style=social&color=white)](https://github.com/ml-explore/mlx/stargazers)  
+   🍏 Apple Silicon machine learning framework developed by Apple Machine Learning Research, featuring unified memory multi-device arrays and native on-device SLM fine-tuning and inference.
+
+7. **[QwenLM/Qwen2.5](https://github.com/QwenLM/Qwen2.5)** [![GitHub stars](https://img.shields.io/github/stars/QwenLM/Qwen2.5?style=social&color=white)](https://github.com/QwenLM/Qwen2.5/stargazers)  
+   🌏 Alibaba's powerhouse open-weights language model family featuring ultra-capable 0.5B, 1.5B, and 3B parameter variants with 128K context length, coding competence, and rich multilingual support.
+
+8. **[Mozilla-Ocho/llamafile](https://github.com/Mozilla-Ocho/llamafile)** [![GitHub stars](https://img.shields.io/github/stars/Mozilla-Ocho/llamafile?style=social&color=white)](https://github.com/Mozilla-Ocho/llamafile/stargazers)  
+   📦 Mozilla's project that turns open SLMs into single-file multi-platform executables using Cosmopolitan Libc, allowing AI models to run on six operating systems across AMD64 and ARM64 without installation.
+
+9. **[Tencent/ncnn](https://github.com/Tencent/ncnn)** [![GitHub stars](https://img.shields.io/github/stars/Tencent/ncnn?style=social&color=white)](https://github.com/Tencent/ncnn/stargazers)  
+   📱 Tencent's battle-tested neural network computing framework deeply optimized for mobile phone SoCs, ARM NEON assembly, and edge embedded devices with no third-party runtime dependencies.
+
+10. **[mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm)** [![GitHub stars](https://img.shields.io/github/stars/mlc-ai/mlc-llm?style=social&color=white)](https://github.com/mlc-ai/mlc-llm/stargazers)  
+    🌐 Universal machine learning compiler-driven deployment engine. Compiles SLMs directly into native binaries running on iOS, Android, WebGPU (browsers), Windows, and Linux across heterogeneous GPUs.
+
+11. **[microsoft/onnxruntime](https://github.com/microsoft/onnxruntime)** [![GitHub stars](https://img.shields.io/github/stars/microsoft/onnxruntime?style=social&color=white)](https://github.com/microsoft/onnxruntime/stargazers)  
+    ⚙️ Microsoft's high-performance cross-platform scoring engine. Features ONNX Runtime Mobile with INT4/INT8 quantization tailored for embedded Linux, Android, iOS, and DirectML hardware acceleration.
+
+12. **[alibaba/MNN](https://github.com/alibaba/MNN)** [![GitHub stars](https://img.shields.io/github/stars/alibaba/MNN?style=social&color=white)](https://github.com/alibaba/MNN/stargazers)  
+    🏮 Alibaba's lightweight deep learning inference engine engineered for mobile and embedded devices, delivering state-of-the-art quantized SLM inference across smartphones, tablets, and IoT chips.
+
+13. **[OpenBMB/MiniCPM](https://github.com/OpenBMB/MiniCPM)** [![GitHub stars](https://img.shields.io/github/stars/OpenBMB/MiniCPM?style=social&color=white)](https://github.com/OpenBMB/MiniCPM/stargazers)  
+    🦾 Ultra-dense 2B SLM and vision-language model family built specifically to match and surpass the capabilities of 7B-13B models on mobile edge chipsets while maintaining low power consumption.
+
+14. **[jzhang38/TinyLlama](https://github.com/jzhang38/TinyLlama)** [![GitHub stars](https://img.shields.io/github/stars/jzhang38/TinyLlama?style=social&color=white)](https://github.com/jzhang38/TinyLlama/stargazers)  
+    🦙 Compact 1.1B parameter open-source Llama model trained on 3 Trillion tokens, serving as an ideal foundational model for embedded microcomputers, wearable tech, and edge IoT devices.
+
+15. **[google-deepmind/gemma](https://github.com/google-deepmind/gemma)** [![GitHub stars](https://img.shields.io/github/stars/google-deepmind/gemma?style=social&color=white)](https://github.com/google-deepmind/gemma/stargazers)  
+    💎 Google DeepMind's official open weights and implementation of the Gemma model family, offering lightweight 2B parameter architectures engineered for seamless integration with LiteRT and mobile GPUs.
+
+16. **[apple/coremltools](https://github.com/apple/coremltools)** [![GitHub stars](https://img.shields.io/github/stars/apple/coremltools?style=social&color=white)](https://github.com/apple/coremltools/stargazers)  
+    🍏 Apple's Python package for converting PyTorch, TensorFlow, and ONNX neural network models into Core ML format, featuring advanced palletization and weight compression for Apple Neural Engine (ANE).
+
+17. **[pytorch/executorch](https://github.com/pytorch/executorch)** [![GitHub stars](https://img.shields.io/github/stars/pytorch/executorch?style=social&color=white)](https://github.com/pytorch/executorch/stargazers)  
+    🔥 Meta PyTorch's official end-to-end framework for deploying PyTorch-trained neural networks and SLMs to mobile devices, wearables, microcontrollers, and edge silicon with modular backends.
+
+18. **[huggingface/smollm](https://github.com/huggingface/smollm)** [![GitHub stars](https://img.shields.io/github/stars/huggingface/smollm?style=social&color=white)](https://github.com/huggingface/smollm/stargazers)  
+    🤗 Hugging Face's fully open-source SLM family (135M, 360M, and 1.7B params) complete with training recipes, tokenizers, datasets, and benchmark suites optimized for on-device and browser agents.
+
+19. **[microsoft/Phi-3CookBook](https://github.com/microsoft/Phi-3CookBook)** [![GitHub stars](https://img.shields.io/github/stars/microsoft/Phi-3CookBook?style=social&color=white)](https://github.com/microsoft/Phi-3CookBook/stargazers)  
+    📖 Microsoft's exhaustive cookbook and practical developer guides for fine-tuning, quantizing, and deploying Phi-3, Phi-3.5, and Phi-4 mini SLMs across mobile devices, IoT, and Windows Copilot+ NPUs.
+
+20. **[mit-han-lab/llm-awq](https://github.com/mit-han-lab/llm-awq)** [![GitHub stars](https://img.shields.io/github/stars/mit-han-lab/llm-awq?style=social&color=white)](https://github.com/mit-han-lab/llm-awq/stargazers)  
+    💡 Activation-aware Weight Quantization (AWQ) for LLMs/SLMs from MIT HAN Lab. Protects salient weights to achieve true 4-bit edge inference with negligible perplexity degradation.
+
+21. **[google-ai-edge/LiteRT](https://github.com/google-ai-edge/LiteRT)** [![GitHub stars](https://img.shields.io/github/stars/google-ai-edge/LiteRT?style=social&color=white)](https://github.com/google-ai-edge/LiteRT/stargazers)  
+    ⚡ Google's evolution of TensorFlow Lite for on-device generative AI and SLM inference, clocking over 50+ tokens/sec on mobile GPUs and supporting hardware NPU delegates across Android and iOS.
+
+22. **[TilelliLab/atome-lm](https://github.com/TilelliLab/atome-lm)** [![GitHub stars](https://img.shields.io/github/stars/TilelliLab/atome-lm?style=social&color=white)](https://github.com/TilelliLab/atome-lm/stargazers)  
+    🔬 Ultra-compact ternary, zero-heap tiny language model engineered to run inside a $2 microcontroller (under 100 KB memory footprint) with bit-exact Python ↔ C99 ↔ ARM Cortex-M3 parity.
+
+---
+
+## 🧩 Notable Edge-Optimized Model Families
+
+| 🧠 Model Family | 📏 Parameter Tiers | 📜 License | 💡 Edge Suitability &amp; Highlight |
+| :--- | :--- | :--- | :--- |
+| **Google Gemma 4 (E2B / E4B)** | 2B, 4B effective | Open Weights | Multimodal (text, vision, audio), 128K context, native tool calling; runs under 1.2 GB RAM via LiteRT-LM. |
+| **Microsoft Phi-3.5 / Phi-4-mini** | 3.8B | MIT | Outperforms many 7B–14B models on STEM &amp; math; achieves 650 tokens/sec at 1.5W on Copilot+ PC NPUs. |
+| **Qwen 2.5 (0.5B – 3B)** | 0.5B, 1.5B, 3B | Apache-2.0 | Best-in-class multi-lingual capability, coding, and structured JSON generation in sub-3B class. |
+| **Hugging Face SmolLM2 / SmolLM3** | 135M, 360M, 1.7B | Apache-2.0 | 100% transparent dataset pipeline; 135M runs in bare-metal browsers via WebGPU or low-power embedded CPUs. |
+| **OpenBMB MiniCPM-2B** | 2.4B | Apache-2.0 | Ranked #1 under-4B open model on Artificial Analysis Intelligence Index; exceptional token efficiency. |
+| **Salesforce xLAM-2-3B** | 3.2B | Open Weights | Specialized SLM agent achieving top-tier scores on Berkeley Function-Calling Leaderboard (BFCL). |
+| **DeepSeek-R1-Distill-Qwen-1.5B** | 1.5B | MIT | Distilled reasoning model (~1 GB in 4-bit GGUF) bringing multi-step chain-of-thought logic to Raspberry Pi 5. |
+
+---
+
+## 💡 Architectural Best Practices
+
+1. **Parameter Sweet-Spot**: Models between **1.5B and 3.5B parameters** represent the operational sweet spot—delivering reliable multi-turn tool calling and reasoning while fitting comfortably in 2–4 GB memory footprints.
+2. **Quantization Strategies**: For mobile NPUs and CPUs, favor **AWQ 4-bit** or **GGUF Q4_K_M / Q5_K_M** to retain 98%+ benchmark accuracy while slashing RAM consumption by 65–75%.
+3. **Hardware Delegates**: Utilize **LiteRT NPU delegates** on Qualcomm/MediaTek Android phones, **Core ML / MLX** on Apple Silicon, and **DirectML** on Windows Copilot+ devices for maximum tokens/watt battery efficiency.
+
+---
+
+## 🤝 How to Contribute
+
+We actively welcome contributions from the edge computing, mobile development, and embedded ML communities! 🌍
+
+1. 🍴 **Fork** this repository.
+2. 🌿 Create a descriptive branch: `git checkout -b feature/add-new-edge-slm`.
+3. 📝 Update `README.md` following the established tabular and list conventions.
+4. 🔍 Ensure links are active and provide factual parameter sizes and licensing details.
+5. 🚀 Submit a **Pull Request** detailing your additions.
+
+---
+
+## 💖 Support
+
+If you find this curated directory helpful for your edge AI workflows, on-device apps, or research:
+
+- ⭐ **Star this repository** to keep up with active releases!
+- 🍴 **Fork and share** with fellow embedded engineers and AI practitioners.
+- ☕ **Buy me a coffee &amp; support ongoing curation** directly through the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Your sponsorship enables maintaining automated benchmark trackers, testing edge models on physical devices, and keeping this ecosystem guide up-to-date. Thank you! 🙏
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Edge-Small-Language-Models&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Edge-Small-Language-Models&type=date&legend=top-left)
+
+---
+
+## 📜 Disclaimer
+
+- This is a community-curated collection intended for educational and engineering reference.
+- Hardware inference benchmarks vary based on thermal throttling, quantization format, and memory bus bandwidth; always benchmark on target silicon before shipping to production.

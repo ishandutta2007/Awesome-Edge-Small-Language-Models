@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0d1527"/>
+      <stop offset="100%" stop-color="#080b14"/>
+    </linearGradient>
+
+    <!-- Animated Glow Gradient -->
+    <linearGradient id="cyberGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe">
+        <animate attributeName="stop-color" values="#00f2fe;#4facfe;#9b51e0;#00f2fe" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#4facfe">
+        <animate attributeName="stop-color" values="#4facfe;#9b51e0;#00f2fe;#4facfe" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#a855f7">
+        <animate attributeName="stop-color" values="#a855f7;#00f2fe;#4facfe;#a855f7" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Edge Pulse Gradient -->
+    <radialGradient id="pulseGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .node {
+        animation: pulse 3s infinite ease-in-out;
+      }
+      .node-slow {
+        animation: pulse 5s infinite ease-in-out;
+      }
+      .data-line {
+        stroke-dasharray: 8, 8;
+        animation: dash 12s linear infinite;
+      }
+      .grid-line {
+        stroke: rgba(56, 189, 248, 0.07);
+        stroke-width: 1;
+      }
+      .chip-glow {
+        animation: chipPulse 4s infinite alternate ease-in-out;
+      }
+      .tag-bg {
+        transition: all 0.3s ease;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.3; transform: scale(0.95); }
+        50% { opacity: 0.9; transform: scale(1.05); }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -160; }
+      }
+      @keyframes chipPulse {
+        0% { filter: drop-shadow(0 0 4px #38bdf8); }
+        100% { filter: drop-shadow(0 0 16px #a855f7); }
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+      }
+      .tag-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Subtle Futuristic Grid Pattern -->
+  <g class="grid">
+    <line x1="0" y1="60" x2="1200" y2="60" class="grid-line" />
+    <line x1="0" y1="120" x2="1200" y2="120" class="grid-line" />
+    <line x1="0" y1="180" x2="1200" y2="180" class="grid-line" />
+    <line x1="0" y1="240" x2="1200" y2="240" class="grid-line" />
+    <line x1="0" y1="300" x2="1200" y2="300" class="grid-line" />
+    <line x1="150" y1="0" x2="150" y2="380" class="grid-line" />
+    <line x1="300" y1="0" x2="300" y2="380" class="grid-line" />
+    <line x1="450" y1="0" x2="450" y2="380" class="grid-line" />
+    <line x1="600" y1="0" x2="600" y2="380" class="grid-line" />
+    <line x1="750" y1="0" x2="750" y2="380" class="grid-line" />
+    <line x1="900" y1="0" x2="900" y2="380" class="grid-line" />
+    <line x1="1050" y1="0" x2="1050" y2="380" class="grid-line" />
+  </g>
+
+  <!-- Dynamic / Animated Edge Neural Constellation in Background -->
+  <g opacity="0.6">
+    <!-- Connecting Synaptic Lines -->
+    <path d="M 120 100 Q 280 40 450 90 T 780 70 T 1080 120" fill="none" stroke="url(#cyberGlow)" stroke-width="2" class="data-line"/>
+    <path d="M 80 280 Q 240 330 520 290 T 920 310 T 1120 260" fill="none" stroke="url(#cyberGlow)" stroke-width="1.5" class="data-line"/>
+    <path d="M 200 80 L 150 250" fill="none" stroke="rgba(56, 189, 248, 0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M 1000 80 L 1050 270" fill="none" stroke="rgba(168, 85, 247, 0.2)" stroke-width="1" stroke-dasharray="4,4"/>
+
+    <!-- Glowing Interactive Nodes (Pulsing Circles) -->
+    <circle cx="120" cy="100" r="18" fill="url(#pulseGlow)" class="node" />
+    <circle cx="120" cy="100" r="5" fill="#38bdf8" />
+
+    <circle cx="280" cy="50" r="14" fill="url(#pulseGlow)" class="node-slow" />
+    <circle cx="280" cy="50" r="4" fill="#818cf8" />
+
+    <circle cx="1080" cy="120" r="22" fill="url(#pulseGlow)" class="node" />
+    <circle cx="1080" cy="120" r="6" fill="#c084fc" />
+
+    <circle cx="950" cy="60" r="16" fill="url(#pulseGlow)" class="node-slow" />
+    <circle cx="950" cy="60" r="4" fill="#38bdf8" />
+
+    <circle cx="150" cy="270" r="18" fill="url(#pulseGlow)" class="node-slow" />
+    <circle cx="150" cy="270" r="5" fill="#06b6d4" />
+
+    <circle cx="1040" cy="280" r="16" fill="url(#pulseGlow)" class="node" />
+    <circle cx="1040" cy="280" r="5" fill="#f43f5e" />
+  </g>
+
+  <!-- Glowing Edge Border Frame with dynamic gradient -->
+  <rect x="2" y="2" width="1196" height="376" rx="15" fill="none" stroke="url(#cyberGlow)" stroke-width="2.5" opacity="0.85"/>
+
+  <!-- Center Card Backdrop to keep foreground text 100% visible and unhidden -->
+  <rect x="180" y="45" width="840" height="235" rx="20" fill="#090d19" fill-opacity="0.82" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" filter="url(#shadow)"/>
+
+  <!-- Foreground Title and Content -->
+  <g id="foreground-content" filter="url(#shadow)">
+    <!-- Category Pill Badge -->
+    <g transform="translate(485, 68)">
+      <rect width="230" height="28" rx="14" fill="rgba(56, 189, 248, 0.12)" stroke="#38bdf8" stroke-width="1"/>
+      <circle cx="18" cy="14" r="5" fill="#38bdf8" class="chip-glow"/>
+      <text x="32" y="19" fill="#7dd3fc" class="tag-text" font-size="12" letter-spacing="1.5">ON-DEVICE AI ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="145" text-anchor="middle" fill="url(#textGrad)" class="title-text" font-size="38">
+      Awesome Edge &amp; Small Language Models
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="185" text-anchor="middle" fill="#94a3b8" class="subtitle-text" font-size="17">
+      Curated Directory of On-Device SLMs • Mobile Runtimes • Embedded NPU Engines • Edge AI
+    </text>
+
+    <!-- Key Metrics / Highlights Row -->
+    <text x="600" y="222" text-anchor="middle" fill="#38bdf8" class="subtitle-text" font-size="14" font-weight="600">
+      ⚡ Ultra-Low Latency &nbsp;•&nbsp; 🔒 100% Offline Privacy &nbsp;•&nbsp; 🔋 Zero Cloud Costs &nbsp;•&nbsp; 📱 Mobile &amp; Microcontrollers
+    </text>
+
+    <!-- Bottom Feature Badges / Floating Pills -->
+    <g transform="translate(195, 242)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="145" height="26" rx="13" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="72" y="17" text-anchor="middle" fill="#cbd5e1" class="tag-text">🤖 Sub-4B Models</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(160, 0)">
+        <rect width="170" height="26" rx="13" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="85" y="17" text-anchor="middle" fill="#cbd5e1" class="tag-text">⚡ LiteRT &amp; llama.cpp</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(345, 0)">
+        <rect width="155" height="26" rx="13" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="77" y="17" text-anchor="middle" fill="#cbd5e1" class="tag-text">🍏 Apple Silicon &amp; NPU</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(515, 0)">
+        <rect width="145" height="26" rx="13" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="72" y="17" text-anchor="middle" fill="#cbd5e1" class="tag-text">📦 GGUF &amp; ONNX</text>
+      </g>
+      <!-- Pill 5 -->
+      <g transform="translate(675, 0)">
+        <rect width="135" height="26" rx="13" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="67" y="17" text-anchor="middle" fill="#cbd5e1" class="tag-text">🎯 TinyML &amp; IoT</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Line -->
+  <line x1="200" y1="355" x2="1000" y2="355" stroke="url(#cyberGlow)" stroke-width="1.5" opacity="0.7"/>
+</svg>
