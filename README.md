@@ -69,72 +69,72 @@ The table below catalogs leading commercial and hosted SaaS platforms facilitati
 
 ## 🛠️ Open-Source GitHub Projects
 
-The following curated open-source projects comprise the backbone of edge inference engines, model conversion frameworks, on-device runtimes, and local model families. Entries are **sorted descending by GitHub star count**:
+The following curated open-source projects comprise the backbone of edge inference engines, model conversion frameworks, on-device runtimes, and local model families. Entries are **sorted descending by GitHub Stars_Count**:
 
-1. **[ollama/ollama](https://github.com/ollama/ollama)** [![GitHub stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers)  
+1. **[ollama/ollama](https://github.com/ollama/ollama)** [![GitHub_Stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers)  
    🚀 The leading developer framework and local server to get up and running with LLaMA, Phi, Gemma, and Mistral SLMs locally on macOS, Linux, and Windows with a seamless CLI and OpenAI-compatible REST API.
 
-2. **[ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)** [![GitHub stars](https://img.shields.io/github/stars/ggml-org/llama.cpp?style=social&color=white)](https://github.com/ggml-org/llama.cpp/stargazers)  
+2. **[ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp)** [![GitHub_Stars](https://img.shields.io/github/stars/ggml-org/llama.cpp?style=social&color=white)](https://github.com/ggml-org/llama.cpp/stargazers)  
    ⚡ The foundational C/C++ LLM/SLM inference engine powering the local AI revolution. Enables plain C/C++ execution without dependencies, state-of-the-art GGUF 2-bit to 8-bit quantization, and blazing-fast acceleration across Apple Metal, CUDA, Vulkan, and ARM NEON.
 
-3. **[nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)** [![GitHub stars](https://img.shields.io/github/stars/nomic-ai/gpt4all?style=social&color=white)](https://github.com/nomic-ai/gpt4all/stargazers)  
+3. **[nomic-ai/gpt4all](https://github.com/nomic-ai/gpt4all)** [![GitHub_Stars](https://img.shields.io/github/stars/nomic-ai/gpt4all?style=social&color=white)](https://github.com/nomic-ai/gpt4all/stargazers)  
    🖥️ Privacy-first, open-source desktop ecosystem and client allowing consumer laptops and edge PCs to run quantized SLMs locally without an internet connection or telemetry.
 
-4. **[ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)** [![GitHub stars](https://img.shields.io/github/stars/ggml-org/whisper.cpp?style=social&color=white)](https://github.com/ggml-org/whisper.cpp/stargazers)  
+4. **[ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)** [![GitHub_Stars](https://img.shields.io/github/stars/ggml-org/whisper.cpp?style=social&color=white)](https://github.com/ggml-org/whisper.cpp/stargazers)  
    🎙️ High-performance C/C++ implementation of OpenAI's Whisper speech recognition model. Designed for edge audio transcription on Raspberry Pi, mobile devices, and microprocessors with zero memory allocations.
 
-5. **[mudler/LocalAI](https://github.com/mudler/LocalAI)** [![GitHub stars](https://img.shields.io/github/stars/mudler/LocalAI?style=social&color=white)](https://github.com/mudler/LocalAI/stargazers)  
+5. **[mudler/LocalAI](https://github.com/mudler/LocalAI)** [![GitHub_Stars](https://img.shields.io/github/stars/mudler/LocalAI?style=social&color=white)](https://github.com/mudler/LocalAI/stargazers)  
    🔌 Free, open-source OpenAI drop-in replacement REST API for local CPU/GPU and edge appliances, supporting SLM text generation, audio transcription, and image synthesis without cloud vendor lock-in.
 
-6. **[ml-explore/mlx](https://github.com/ml-explore/mlx)** [![GitHub stars](https://img.shields.io/github/stars/ml-explore/mlx?style=social&color=white)](https://github.com/ml-explore/mlx/stargazers)  
+6. **[ml-explore/mlx](https://github.com/ml-explore/mlx)** [![GitHub_Stars](https://img.shields.io/github/stars/ml-explore/mlx?style=social&color=white)](https://github.com/ml-explore/mlx/stargazers)  
    🍏 Apple Silicon machine learning framework developed by Apple Machine Learning Research, featuring unified memory multi-device arrays and native on-device SLM fine-tuning and inference.
 
-7. **[QwenLM/Qwen2.5](https://github.com/QwenLM/Qwen2.5)** [![GitHub stars](https://img.shields.io/github/stars/QwenLM/Qwen2.5?style=social&color=white)](https://github.com/QwenLM/Qwen2.5/stargazers)  
+7. **[QwenLM/Qwen2.5](https://github.com/QwenLM/Qwen2.5)** [![GitHub_Stars](https://img.shields.io/github/stars/QwenLM/Qwen2.5?style=social&color=white)](https://github.com/QwenLM/Qwen2.5/stargazers)  
    🌏 Alibaba's powerhouse open-weights language model family featuring ultra-capable 0.5B, 1.5B, and 3B parameter variants with 128K context length, coding competence, and rich multilingual support.
 
-8. **[Mozilla-Ocho/llamafile](https://github.com/Mozilla-Ocho/llamafile)** [![GitHub stars](https://img.shields.io/github/stars/Mozilla-Ocho/llamafile?style=social&color=white)](https://github.com/Mozilla-Ocho/llamafile/stargazers)  
+8. **[Mozilla-Ocho/llamafile](https://github.com/Mozilla-Ocho/llamafile)** [![GitHub_Stars](https://img.shields.io/github/stars/Mozilla-Ocho/llamafile?style=social&color=white)](https://github.com/Mozilla-Ocho/llamafile/stargazers)  
    📦 Mozilla's project that turns open SLMs into single-file multi-platform executables using Cosmopolitan Libc, allowing AI models to run on six operating systems across AMD64 and ARM64 without installation.
 
-9. **[Tencent/ncnn](https://github.com/Tencent/ncnn)** [![GitHub stars](https://img.shields.io/github/stars/Tencent/ncnn?style=social&color=white)](https://github.com/Tencent/ncnn/stargazers)  
+9. **[Tencent/ncnn](https://github.com/Tencent/ncnn)** [![GitHub_Stars](https://img.shields.io/github/stars/Tencent/ncnn?style=social&color=white)](https://github.com/Tencent/ncnn/stargazers)  
    📱 Tencent's battle-tested neural network computing framework deeply optimized for mobile phone SoCs, ARM NEON assembly, and edge embedded devices with no third-party runtime dependencies.
 
-10. **[mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm)** [![GitHub stars](https://img.shields.io/github/stars/mlc-ai/mlc-llm?style=social&color=white)](https://github.com/mlc-ai/mlc-llm/stargazers)  
+10. **[mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm)** [![GitHub_Stars](https://img.shields.io/github/stars/mlc-ai/mlc-llm?style=social&color=white)](https://github.com/mlc-ai/mlc-llm/stargazers)  
     🌐 Universal machine learning compiler-driven deployment engine. Compiles SLMs directly into native binaries running on iOS, Android, WebGPU (browsers), Windows, and Linux across heterogeneous GPUs.
 
-11. **[microsoft/onnxruntime](https://github.com/microsoft/onnxruntime)** [![GitHub stars](https://img.shields.io/github/stars/microsoft/onnxruntime?style=social&color=white)](https://github.com/microsoft/onnxruntime/stargazers)  
+11. **[microsoft/onnxruntime](https://github.com/microsoft/onnxruntime)** [![GitHub_Stars](https://img.shields.io/github/stars/microsoft/onnxruntime?style=social&color=white)](https://github.com/microsoft/onnxruntime/stargazers)  
     ⚙️ Microsoft's high-performance cross-platform scoring engine. Features ONNX Runtime Mobile with INT4/INT8 quantization tailored for embedded Linux, Android, iOS, and DirectML hardware acceleration.
 
-12. **[alibaba/MNN](https://github.com/alibaba/MNN)** [![GitHub stars](https://img.shields.io/github/stars/alibaba/MNN?style=social&color=white)](https://github.com/alibaba/MNN/stargazers)  
+12. **[alibaba/MNN](https://github.com/alibaba/MNN)** [![GitHub_Stars](https://img.shields.io/github/stars/alibaba/MNN?style=social&color=white)](https://github.com/alibaba/MNN/stargazers)  
     🏮 Alibaba's lightweight deep learning inference engine engineered for mobile and embedded devices, delivering state-of-the-art quantized SLM inference across smartphones, tablets, and IoT chips.
 
-13. **[OpenBMB/MiniCPM](https://github.com/OpenBMB/MiniCPM)** [![GitHub stars](https://img.shields.io/github/stars/OpenBMB/MiniCPM?style=social&color=white)](https://github.com/OpenBMB/MiniCPM/stargazers)  
+13. **[OpenBMB/MiniCPM](https://github.com/OpenBMB/MiniCPM)** [![GitHub_Stars](https://img.shields.io/github/stars/OpenBMB/MiniCPM?style=social&color=white)](https://github.com/OpenBMB/MiniCPM/stargazers)  
     🦾 Ultra-dense 2B SLM and vision-language model family built specifically to match and surpass the capabilities of 7B-13B models on mobile edge chipsets while maintaining low power consumption.
 
-14. **[jzhang38/TinyLlama](https://github.com/jzhang38/TinyLlama)** [![GitHub stars](https://img.shields.io/github/stars/jzhang38/TinyLlama?style=social&color=white)](https://github.com/jzhang38/TinyLlama/stargazers)  
+14. **[jzhang38/TinyLlama](https://github.com/jzhang38/TinyLlama)** [![GitHub_Stars](https://img.shields.io/github/stars/jzhang38/TinyLlama?style=social&color=white)](https://github.com/jzhang38/TinyLlama/stargazers)  
     🦙 Compact 1.1B parameter open-source Llama model trained on 3 Trillion tokens, serving as an ideal foundational model for embedded microcomputers, wearable tech, and edge IoT devices.
 
-15. **[google-deepmind/gemma](https://github.com/google-deepmind/gemma)** [![GitHub stars](https://img.shields.io/github/stars/google-deepmind/gemma?style=social&color=white)](https://github.com/google-deepmind/gemma/stargazers)  
+15. **[google-deepmind/gemma](https://github.com/google-deepmind/gemma)** [![GitHub_Stars](https://img.shields.io/github/stars/google-deepmind/gemma?style=social&color=white)](https://github.com/google-deepmind/gemma/stargazers)  
     💎 Google DeepMind's official open weights and implementation of the Gemma model family, offering lightweight 2B parameter architectures engineered for seamless integration with LiteRT and mobile GPUs.
 
-16. **[apple/coremltools](https://github.com/apple/coremltools)** [![GitHub stars](https://img.shields.io/github/stars/apple/coremltools?style=social&color=white)](https://github.com/apple/coremltools/stargazers)  
+16. **[apple/coremltools](https://github.com/apple/coremltools)** [![GitHub_Stars](https://img.shields.io/github/stars/apple/coremltools?style=social&color=white)](https://github.com/apple/coremltools/stargazers)  
     🍏 Apple's Python package for converting PyTorch, TensorFlow, and ONNX neural network models into Core ML format, featuring advanced palletization and weight compression for Apple Neural Engine (ANE).
 
-17. **[pytorch/executorch](https://github.com/pytorch/executorch)** [![GitHub stars](https://img.shields.io/github/stars/pytorch/executorch?style=social&color=white)](https://github.com/pytorch/executorch/stargazers)  
+17. **[pytorch/executorch](https://github.com/pytorch/executorch)** [![GitHub_Stars](https://img.shields.io/github/stars/pytorch/executorch?style=social&color=white)](https://github.com/pytorch/executorch/stargazers)  
     🔥 Meta PyTorch's official end-to-end framework for deploying PyTorch-trained neural networks and SLMs to mobile devices, wearables, microcontrollers, and edge silicon with modular backends.
 
-18. **[huggingface/smollm](https://github.com/huggingface/smollm)** [![GitHub stars](https://img.shields.io/github/stars/huggingface/smollm?style=social&color=white)](https://github.com/huggingface/smollm/stargazers)  
+18. **[huggingface/smollm](https://github.com/huggingface/smollm)** [![GitHub_Stars](https://img.shields.io/github/stars/huggingface/smollm?style=social&color=white)](https://github.com/huggingface/smollm/stargazers)  
     🤗 Hugging Face's fully open-source SLM family (135M, 360M, and 1.7B params) complete with training recipes, tokenizers, datasets, and benchmark suites optimized for on-device and browser agents.
 
-19. **[microsoft/Phi-3CookBook](https://github.com/microsoft/Phi-3CookBook)** [![GitHub stars](https://img.shields.io/github/stars/microsoft/Phi-3CookBook?style=social&color=white)](https://github.com/microsoft/Phi-3CookBook/stargazers)  
+19. **[microsoft/Phi-3CookBook](https://github.com/microsoft/Phi-3CookBook)** [![GitHub_Stars](https://img.shields.io/github/stars/microsoft/Phi-3CookBook?style=social&color=white)](https://github.com/microsoft/Phi-3CookBook/stargazers)  
     📖 Microsoft's exhaustive cookbook and practical developer guides for fine-tuning, quantizing, and deploying Phi-3, Phi-3.5, and Phi-4 mini SLMs across mobile devices, IoT, and Windows Copilot+ NPUs.
 
-20. **[mit-han-lab/llm-awq](https://github.com/mit-han-lab/llm-awq)** [![GitHub stars](https://img.shields.io/github/stars/mit-han-lab/llm-awq?style=social&color=white)](https://github.com/mit-han-lab/llm-awq/stargazers)  
+20. **[mit-han-lab/llm-awq](https://github.com/mit-han-lab/llm-awq)** [![GitHub_Stars](https://img.shields.io/github/stars/mit-han-lab/llm-awq?style=social&color=white)](https://github.com/mit-han-lab/llm-awq/stargazers)  
     💡 Activation-aware Weight Quantization (AWQ) for LLMs/SLMs from MIT HAN Lab. Protects salient weights to achieve true 4-bit edge inference with negligible perplexity degradation.
 
-21. **[google-ai-edge/LiteRT](https://github.com/google-ai-edge/LiteRT)** [![GitHub stars](https://img.shields.io/github/stars/google-ai-edge/LiteRT?style=social&color=white)](https://github.com/google-ai-edge/LiteRT/stargazers)  
+21. **[google-ai-edge/LiteRT](https://github.com/google-ai-edge/LiteRT)** [![GitHub_Stars](https://img.shields.io/github/stars/google-ai-edge/LiteRT?style=social&color=white)](https://github.com/google-ai-edge/LiteRT/stargazers)  
     ⚡ Google's evolution of TensorFlow Lite for on-device generative AI and SLM inference, clocking over 50+ tokens/sec on mobile GPUs and supporting hardware NPU delegates across Android and iOS.
 
-22. **[TilelliLab/atome-lm](https://github.com/TilelliLab/atome-lm)** [![GitHub stars](https://img.shields.io/github/stars/TilelliLab/atome-lm?style=social&color=white)](https://github.com/TilelliLab/atome-lm/stargazers)  
+22. **[TilelliLab/atome-lm](https://github.com/TilelliLab/atome-lm)** [![GitHub_Stars](https://img.shields.io/github/stars/TilelliLab/atome-lm?style=social&color=white)](https://github.com/TilelliLab/atome-lm/stargazers)  
     🔬 Ultra-compact ternary, zero-heap tiny language model engineered to run inside a $2 microcontroller (under 100 KB memory footprint) with bit-exact Python ↔ C99 ↔ ARM Cortex-M3 parity.
 
 ---
