@@ -69,7 +69,7 @@ The table below catalogs leading commercial and hosted SaaS platforms facilitati
 
 ## 🛠️ Open-Source GitHub Projects
 
-The following curated open-source projects comprise the backbone of edge inference engines, model conversion frameworks, on-device runtimes, and local model families. Entries are **sorted descending by GitHub Stars_Count**:
+The following curated open-source projects comprise the backbone of edge inference engines, model conversion frameworks, on-device runtimes, and local model families. Entries are **sorted descending by GitHub_Stars_Count**:
 
 1. **[ollama/ollama](https://github.com/ollama/ollama)** [![GitHub_Stars](https://img.shields.io/github/stars/ollama/ollama?style=social&color=white)](https://github.com/ollama/ollama/stargazers)  
    🚀 The leading developer framework and local server to get up and running with LLaMA, Phi, Gemma, and Mistral SLMs locally on macOS, Linux, and Windows with a seamless CLI and OpenAI-compatible REST API.
