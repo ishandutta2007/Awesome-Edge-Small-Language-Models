@@ -1,7 +1,7 @@
 # ⚡ Awesome Edge &amp; Small Language Models (SLMs) 🧠
 
 <p align="center">
-  <img src="./assets/banner.svg" alt="Awesome Edge &amp; Small Language Models Banner" width="100%">
+  <img src="assets/banner.svg" alt="Awesome Edge &amp; Small Language Models Banner" width="100%">
 </p>
 
 <p align="center">
